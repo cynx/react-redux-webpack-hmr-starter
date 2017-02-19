@@ -8,9 +8,11 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import configureStore from './store/configureStore';
 import {Provider} from 'react-redux'; //HOC
 import {loadCourses} from './actions/courseActions';
+import {loadAuthors} from './actions/authorActions';
 
 const store = configureStore(); //if I pass initial state here, it overrides the initial state param in reducer
 store.dispatch(loadCourses());
+store.dispatch(loadAuthors());
 
 render (
   <Provider store={store}>
