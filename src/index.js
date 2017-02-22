@@ -1,3 +1,4 @@
+/*eslint-disable import/default */
 import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom'; //if imported ReactDOM, then have to use ReactDOM.render
@@ -6,7 +7,7 @@ import routes from './routes';
 import './styles/styles.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/toastr/build/toastr.min.css';
-import configureStore from './store/configureStore';
+import configureStore from './store/configureStore.dev';
 import {Provider} from 'react-redux'; //HOC
 import {loadCourses} from './actions/courseActions';
 import {loadAuthors} from './actions/authorActions';
